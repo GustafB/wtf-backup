@@ -36,7 +36,7 @@ Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
 
 The script will create `WoW_WTF` inside it, but the root path must exist.
 
-Run in PowerShell:
+Run in PowerShell, or do it via Finder:
 
 ```powershell
 New-Item -ItemType Directory -Path "C:\Backups" -Force
@@ -56,15 +56,19 @@ A ZIP should appear in `C:\Backups\WoW_WTF`.
 Open **Task Scheduler**:
 
 1. **Create Task…**
+   ![create-task](images/create-task.png "create-task")
 2. **General**
-   - Name: `WoW WTF Backup`
+   ![general](images/general.png "general")
+   - Name: `WoW WTF Backup` (can be whatever you like)
    - Run whether user is logged on or not
    - Run with highest privileges
 
 3. **Triggers**
+   ![schedule](images/schedule.png "schedule")
    - Daily → choose a time
 
 4. **Actions**
+   ![action](images/action.png "action")
    - Program/script:
 
      ```
